@@ -1,0 +1,8 @@
+--- 
+description: "Given a valid AGI locus, return homologous genes that exhibit similar expression patterns in equivalent tissues in other plant species"
+main_module: expressologsByLocus/main.py
+name: expressologs_by_locus
+type: query
+version: 0.1
+whitelist: 
+  - bar.utoronto.ca

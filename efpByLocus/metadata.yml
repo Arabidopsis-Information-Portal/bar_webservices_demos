@@ -1,0 +1,7 @@
+--- 
+description: "BAR service to return an eFP image for an AGI locus identifier"
+main_module: efpByLocus/main.py
+name: efp_by_locus
+type: generic
+url: "http://bar.utoronto.ca/webservices"
+version: 0.1
