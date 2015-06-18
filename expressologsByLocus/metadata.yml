@@ -1,8 +1,38 @@
---- 
+---
 description: "Given a valid AGI locus, return homologous genes that exhibit similar expression patterns in equivalent tissues in other plant species"
 main_module: expressologsByLocus/main.py
 name: expressologs_by_locus
 type: query
-version: 0.1
-whitelist: 
+version: 0.2
+whitelist:
   - bar.utoronto.ca
+icon: BAR.png
+tags:
+    - 'expression'
+    - 'arabidopsis'
+    - 'comparative genomics'
+
+authors:
+    - name: Matt Vaughn
+      email: vaughn@tacc.utexas.edu
+      sponsor_organization: Texas Advanced Computing Center
+      sponsor_uri: http://www.tacc.utexas.edu/
+
+endpoints:
+    /search:
+        parameters:
+            - name: locus
+              description: Arabidopsis gene identifier
+              type: string
+              required: true
+              default: 'At2g26230'
+
+sources:
+  - title: Expressologs Retrieval
+    description: Return a JSON data structure consisting of all homologous genes that exhibit similar expression patterns in equivalent tissues in other plant species.
+    language: en-ca
+    sponsor_organization_name: University of Toronto
+    sponsor_uri: http://www.utoronto.ca/
+    provider_name: Nicholas Provart
+    provider_email: nicholas.provart@utoronto.ca
+    uri: http://bar.utoronto.ca/webservices/get_expressologs.php
