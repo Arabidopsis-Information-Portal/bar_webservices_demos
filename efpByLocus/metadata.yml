@@ -3,6 +3,10 @@ name: efp_by_locus
 description: "BAR service to return an eFP image for an AGI locus identifier"
 version: 0.2.0
 icon: BAR.png
+tags:
+    - expression
+    - arabidopsis
+    - fluorescence
 
 authors:
     - name: Matt Vaughn
