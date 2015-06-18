@@ -1,7 +1,53 @@
---- 
-description: "BAR service to return an eFP image for an AGI locus identifier"
-main_module: efpByLocus/main.py
+---
 name: efp_by_locus
+description: "BAR service to return an eFP image for an AGI locus identifier"
+version: 0.2.0
+icon: BAR.png
+
+authors:
+    - name: Matt Vaughn
+      email: vaughn@tacc.utexas.edu
+      sponsor_organization: Texas Advanced Computing Center
+      sponsor_uri: http://www.tacc.utexas.edu/
+
 type: generic
+main_module: efpByLocus/main.py
 url: "http://bar.utoronto.ca/webservices"
-version: 0.1
+validate_request: true
+whitelist:
+    - bar.utoronto.ca
+
+endpoints:
+    /search:
+        parameters:
+            - name: locus
+              description: Arabidopsis gene identifier
+              type: string
+              required: true
+              default: 'AT3G62980'
+            - name: source
+              description: eFP data source
+              type: string
+              required: true
+              default: 'Developmental_Map'
+              enum:
+                - 'Abiotic_Stress'
+                - 'Biotic_Stress'
+                - 'Chemical'
+                - 'Developmental_Map'
+                - 'Guard_Cell'
+                - 'Hormone'
+                - 'Light_Series'
+                - 'Natural_Variation'
+                - 'Seed'
+                - 'Tissue_Specific'
+
+sources:
+  - title: Arabidopsis eFP Browser
+    description: Create 'electronic fluorescent pictographic' representations of your gene of interest's expression patterns based on the Schmid et al. 2005 Map of Arabidopsis Development, the AtGenExpress Consortium data (Abiotic Stress - Kilian et al. 2007, Biotic Stress, and the Chemical and Hormone Series), cell-type or seed-specific data and other data
+    language: en-ca
+    sponsor_organization_name: University of Toronto
+    sponsor_uri: http://www.utoronto.ca/
+    provider_name: Nicholas Provart
+    provider_email: nicholas.provart@utoronto.ca
+    uri: http://bar.utoronto.ca/efp/cgi-bin/efpWeb.cgi
