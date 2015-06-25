@@ -21,6 +21,7 @@ validate_request: true
 whitelist:
     - bar.utoronto.ca
 
+validate_request: true
 endpoints:
     /search:
         parameters:

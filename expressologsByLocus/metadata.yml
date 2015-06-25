@@ -19,6 +19,7 @@ authors:
       sponsor_organization: Texas Advanced Computing Center
       sponsor_uri: http://www.tacc.utexas.edu/
 
+validate_request: true
 endpoints:
     /search:
         parameters:
