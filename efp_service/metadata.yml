@@ -1,0 +1,30 @@
+---
+name: efp_service
+description: Passthrough adapter for BAR service to return an eFP image given an AGI locus identifier
+version: 0.1
+icon: BAR.png
+tags:
+    - expression
+    - arabidopsis
+    - fluorescence
+
+authors:
+    - name: Vivek Krishnakumar
+      email: vkrishna@jcvi.org
+      sponsor_organization: J. Craig Venter Institute
+      sponsor_uri: http://www.jcvi.org
+
+type: passthrough
+url: http://bar.utoronto.ca/webservices/efp_service/efp_service.php
+whitelist:
+    - bar.utoronto.ca
+
+sources:
+  - title: Arabidopsis eFP Browser
+    description: Create 'electronic fluorescent pictographic' representations of your gene of interest's expression patterns based on the Schmid et al. 2005 Map of Arabidopsis Development, the AtGenExpress Consortium data (Abiotic Stress - Kilian et al. 2007, Biotic Stress, and the Chemical and Hormone Series), cell-type or seed-specific data and other data
+    language: en-ca
+    sponsor_organization_name: University of Toronto
+    sponsor_uri: http://www.utoronto.ca/
+    provider_name: Nicholas Provart
+    provider_email: nicholas.provart@utoronto.ca
+    uri: http://bar.utoronto.ca/efp/cgi-bin/efpWeb.cgi
